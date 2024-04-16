@@ -1,3 +1,8 @@
 import App from './components/App.js';
 
-document.getElementById('root').appendChild(App());
+App().then(app=>{ 
+    document.getElementById('root').appendChild(app);
+app.dispatchEvent(new Event("load"));
+
+})
+
